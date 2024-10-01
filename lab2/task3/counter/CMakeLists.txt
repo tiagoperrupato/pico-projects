@@ -10,13 +10,13 @@ pico_sdk_init()
 
 include_directories(${CMAKE_SOURCE_DIR})
 
-add_executable(TrafficLights
-  trafficlights.S
+add_executable(BinaryCounter
+  binarycounter.S
   sdklink.c
 )
 
-pico_enable_stdio_uart(TrafficLights 1)
+pico_enable_stdio_uart(BinaryCounter 1)
 
-pico_add_extra_outputs(TrafficLights)
+pico_add_extra_outputs(BinaryCounter)
 
-target_link_libraries(TrafficLights pico_stdlib)
+target_link_libraries(BinaryCounter pico_stdlib)
