@@ -9,20 +9,35 @@
 
 main:
     @ Initialize GPIO pins as before
-    @ ... (same as previous code)
+    MOV	R0, #LED_PIN1
+	BL	gpio_init
+	MOV	R0, #LED_PIN1
+	MOV	R1, #GPIO_OUT
+	BL	link_gpio_set_dir
+	MOV	R0, #LED_PIN2
+	BL	gpio_init
+	MOV	R0, #LED_PIN2
+	MOV	R1, #GPIO_OUT
+	BL	link_gpio_set_dir
+	MOV	R0, #LED_PIN3
+	BL	gpio_init
+	MOV	R0, #LED_PIN3
+	MOV	R1, #GPIO_OUT
+	BL	link_gpio_set_dir
 
     @ Initialize counter variable
     MOV R4, #0  @ R4 will store the counter value
+    MOV R5, #1
 
 loop:
     @ Convert counter value to binary
-    AND R0, R4, #1  @ Extract least significant bit
+    AND R0, R4, R5  @ Extract least significant bit
     BL link_gpio_put  @ Set LED_PIN1 based on R0
     LSR R4, R4, #1  @ Shift counter value right
-    AND R0, R4, #1  @ Extract second least significant bit
+    AND R0, R4, R5  @ Extract second least significant bit
     BL link_gpio_put  @ Set LED_PIN2 based on R0
     LSR R4, R4, #1  @ Shift counter value right
-    AND R0, R4, #1  @ Extract most significant bit
+    AND R0, R4, R5  @ Extract most significant bit
     BL link_gpio_put  @ Set LED_PIN3 based on R0
 
     @ Delay for 1 second
