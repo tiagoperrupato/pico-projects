@@ -31,13 +31,16 @@ main:
 
 loop:
     @ Convert counter value to binary
-    AND R0, R4, R5  @ Extract least significant bit
+    AND R5, R4, R5  @ Extract least significant bit
+    MOV R0, R5
     BL link_gpio_put  @ Set LED_PIN1 based on R0
     LSR R4, R4, #1  @ Shift counter value right
-    AND R0, R4, R5  @ Extract second least significant bit
+    AND R5, R4, R5  @ Extract least significant bit
+    MOV R0, R5
     BL link_gpio_put  @ Set LED_PIN2 based on R0
     LSR R4, R4, #1  @ Shift counter value right
-    AND R0, R4, R5  @ Extract most significant bit
+    AND R5, R4, R5  @ Extract least significant bit
+    MOV R0, R5
     BL link_gpio_put  @ Set LED_PIN3 based on R0
 
     @ Delay for 1 second
