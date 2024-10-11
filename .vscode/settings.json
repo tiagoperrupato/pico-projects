@@ -1,0 +1,6 @@
+{
+    "cmake.environment": {
+        "PICO_SDK_PATH":"../../pico-sdk",
+        "PICO_TOOLCHAIN_PATH":"../../../../../../Applications/ArmGNUToolchain/13.3.rel1/arm-none-eabi"
+    }
+}
