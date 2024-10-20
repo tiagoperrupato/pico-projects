@@ -53,6 +53,9 @@ add_subdirectory_exclude_platforms(binarycounter)
 # Add 7-segment display example
 add_subdirectory_exclude_platforms(segmentdisplay)
 
+# Add 8 numbers average example
+add_subdirectory_exclude_platforms(average)
+
 
 
 add_compile_options(-Wall
