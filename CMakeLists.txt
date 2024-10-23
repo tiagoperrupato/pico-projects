@@ -56,6 +56,12 @@ add_subdirectory_exclude_platforms(segmentdisplay)
 # Add 8 numbers average example
 add_subdirectory_exclude_platforms(average)
 
+# Add led button example
+add_subdirectory_exclude_platforms(led_button)
+
+# Add led button with no c function example
+add_subdirectory_exclude_platforms(led_button_nofunc)
+
 
 
 add_compile_options(-Wall
