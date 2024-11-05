@@ -71,6 +71,12 @@ add_subdirectory_exclude_platforms(led_button_hardwareCfunc)
 # Add led button with c hardware addressing 2 leds example
 add_subdirectory_exclude_platforms(led_button_hardwareCfunc_2leds)
 
+# Add led button binary counter with interrupts
+add_subdirectory_exclude_platforms(led_button_binarycounter_interrupts)
+
+# Add led button binary counter with interrupts and timer
+add_subdirectory_exclude_platforms(led_button_binarycounter_interrupts_timer)
+
 
 
 add_compile_options(-Wall
