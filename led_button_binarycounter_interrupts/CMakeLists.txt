@@ -1,0 +1,11 @@
+include_directories(${CMAKE_SOURCE_DIR})
+
+add_executable(LED_Button_BinaryCounter_Interrupts
+  led_button_binarycounter_interrupts.c
+)
+
+pico_enable_stdio_uart(LED_Button_BinaryCounter_Interrupts 1)
+
+pico_add_extra_outputs(LED_Button_BinaryCounter_Interrupts)
+
+target_link_libraries(LED_Button_BinaryCounter_Interrupts pico_stdlib)
