@@ -1,0 +1,11 @@
+include_directories(${CMAKE_SOURCE_DIR})
+
+add_executable(LED_Button_HardwareCFunc_2LEDs
+  led_button_hardwareCfunc_2leds.c
+)
+
+pico_enable_stdio_uart(LED_Button_HardwareCFunc_2LEDs 1)
+
+pico_add_extra_outputs(LED_Button_HardwareCFunc_2LEDs)
+
+target_link_libraries(LED_Button_HardwareCFunc_2LEDs pico_stdlib)

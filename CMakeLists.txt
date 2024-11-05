@@ -62,8 +62,14 @@ add_subdirectory_exclude_platforms(led_button)
 # Add led button with no c function example
 add_subdirectory_exclude_platforms(led_button_nofunc)
 
-# Add led button with no c gpio function example
+# Add led button with gpio function example
 add_subdirectory_exclude_platforms(led_button_gpiofunc)
+
+# Add led button with c hardware addressing example
+add_subdirectory_exclude_platforms(led_button_hardwareCfunc)
+
+# Add led button with c hardware addressing 2 leds example
+add_subdirectory_exclude_platforms(led_button_hardwareCfunc_2leds)
 
 
 
